@@ -1,0 +1,212 @@
+:root {
+    --primary: #0088cc;
+    --primary-dark: #006699;
+    --text: #ffffff;
+    --glass: rgba(255, 255, 255, 0.15);
+    --glass-border: rgba(255, 255, 255, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Tajawal', 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #001a33, #003366);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+    direction: rtl;
+}
+
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.container {
+    max-width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.card {
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.glass-effect {
+    background: var(--glass);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.logo-container {
+    position: relative;
+    margin: 0 auto 20px;
+    width: fit-content;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 22px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.badge {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    background: #ff4757;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+    font-size: 28px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 16px;
+    opacity: 0.8;
+    margin-bottom: 25px;
+}
+
+.features {
+    margin: 25px 0;
+    text-align: right;
+}
+
+.feature {
+    padding: 10px 0;
+    font-size: 15px;
+}
+
+.feature span {
+    color: #00b894;
+    margin-left: 8px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+.install-btn {
+    background: linear-gradient(135deg, #00b894, #00cec9);
+    color: white;
+    margin: 20px 0;
+    box-shadow: 0 10px 20px rgba(0, 184, 148, 0.3);
+    width: 100%;
+    max-width: 250px;
+}
+
+.install-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0, 184, 148, 0.4);
+}
+
+.btn-text {
+    margin-left: 8px;
+}
+
+.btn-icon {
+    font-size: 20px;
+}
+
+.steps {
+    margin: 30px 0 20px;
+    text-align: right;
+}
+
+.step {
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+}
+
+.step-number {
+    background: var(--primary);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.footer {
+    text-align: center;
+    font-size: 13px;
+    opacity: 0.7;
+    max-width: 500px;
+}
+
+.credits {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.credits span {
+    color: #00b894;
+}
+
+/* Animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.logo {
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .card {
+        padding: 25px;
+    }
+    
+    .title {
+        font-size: 24px;
+    }
+}
